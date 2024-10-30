@@ -1,0 +1,246 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+%\newcommand{\resumeItem}[2]{
+%  \item\small{
+%    \textbf{#1}{: #2 \vspace{-2pt}}
+%  }
+%}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubSubheading}[1]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {\small#1} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{/}{\Large Prajal Bishwakarma}} & Email : \href{mailto:prajal.b@gmail.com}{prajal.b@gmail.com}\\
+  Seattle, WA & Mobile : 914-282-9893 \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {College of William \& Mary}{Williamsburg, VA}
+      {B.S. Neuroscience, Minor: Computer Science}{August 2013 -- May 2017}
+  \resumeSubHeadingListEnd
+
+%-------RESEARCH EXPERIENCE------------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      % --- RA - Dr. Patel --- 
+      {College of William \& Mary}{Williamsburg, VA}
+      {Undergraduate Research Assistant; Advisor: Mainak Patel}{September 2015 - May 2017}
+      \resumeItemListStart
+        \resumeItem{Investigated network interactions underlying gamma oscillation frequency modulation by activation of NMDA recepters in CA3 subregion using neuron models built in Python}
+        \resumeItem{Reviewed literature to build integrate-and-fire network model}
+        \resumeItem{Built signal processing pipeline for time series local field potential and spiking frequency data from simulations}
+        \resumeItem{Created data visualizations of model behavior in R}
+        \resumeItem{Participated in NSF funded EXTREEMS-QED summer research program}
+        \resumeItem{Wrote and defended undergraduate honors thesis, \textit{The Mechanism of NMDA Receptor Mediated Increase in Gamma Oscillation Frequency}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    %---AIBS---
+    \resumeSubheading
+      {Allen Institute for Brain Science}{Seattle, WA}
+      {Scientific Data Engineer III}{January 2022 - Curent}
+      \resumeItemListStart
+        \resumeItem{Built validation and extract, transform, load (ETL) pipeline in Python for analyzed single cell/nucleus RNAseq and spatial transcriptomics data in the Allen Brain Cell Atlas}
+          \resumeItemListStart
+            \resumeItem{Implemented transformers for whole mouse brain scale gene expression data stored in Anndata and SOMA formats for ingest into the Brain Knowledge Platform (BKP)}
+            \resumeItem{Implemented transformers for cell type taxonomy annotations for ingest into BKP}
+            \resumeItem{Interfaced with senior scientists to translate scientific organization of data to technical requirements for engineering teams}
+          \resumeItemListEnd
+          \resumeItem{Reviewed standards for metadata schemas in the BRAIN Initiative Cell Atlas Network (BICAN) consortium as a member of the Metadata and Ontologies Working Group}
+          \resumeItemListStart
+            \resumeItem{Promoted Findability, Accessibility, Interoperability, and Reusability (FAIR) principles for data sharing in consortium by proposing standards for APIs}
+          \resumeItemListEnd
+          \resumeItem{Maintained general ETL pipeline that supported data releases for various projects in the BKP Data Catalog:}
+            \resumeItemListStart
+              \resumeItem{BICAN Rapid Release - catalog of post-QC fastq files and associated sample metadata from BICAN omics projects}
+              \resumeItem{Genetic Tools Atlas - catalog of enhancer-adeno-associated viruses targeting cell types}
+              \resumeItem{SEA-AD Donor Index - catalog of donor metadata and neuropathology data from members of Seattle Alzheimer's Disease Brain Cell Atlas consortium}
+            \resumeItemListEnd
+          \resumeItem{Built integrations with multiple services supporting migration of data from monolithic labaratory information management system to service oriented architecture}
+        \resumeItem{Built data intake web application for projects and data collections metadata in the BKP Data Catalog}
+        \resumeItem{Mentored intern in implementing integration with service that tracks digital assets}
+      \resumeItemListEnd
+    
+      %---EY---
+    \resumeSubheading
+      {Ernst \& Young}{Arlington, VA}
+      {Senior Software Engineer}{December 2019 -- February 2021}
+      \resumeSubSubheading
+      {Client: Pharmaceutical Firm}
+      \resumeItemListStart
+        \resumeItem{Led team of four developers in Identity and Access Management (IAM) system implementation in Java}
+        \resumeItem{Designed, implemented and documented features of IAM system}
+        \resumeItem{Drafted qualification documentation for system implementation and deployment}
+        \resumeItem{Managed project timeline and engineering backlog}
+      \resumeItemListEnd
+
+      \resumeSubSubheading
+      {Client: Manufacturing Firm}
+      \resumeItemListStart
+        \resumeItem{Co-authored assessment of client IAM practices regarding existing Amazon Web Services (AWS) infrastructure}
+        \resumeItem{Developed prototype integration between AWS IAM and client's existing IAM system}
+        \resumeItem{Demonstrated prototype functionality both to internal and client leadership}
+      \resumeItemListEnd
+
+      \resumeSubSubheading
+      {Internal: Internship Project}
+      \resumeItemListStart
+        \resumeItem{Architected and built front-end infrastructure for IAM system performance dashboard}
+        \resumeItem{Led code reviews and mentored interns in engineering practices}
+      \resumeItemListEnd
+
+    %---Sila---
+    \resumeSubheading
+      {Sila Solutions Group \small(Acquired by Ernst \& Young)}{Arlington, VA}
+      {Software Engineer}{July 2018 - December 2019}
+      \resumeSubSubheading
+      {Client: Financial Services Firm}
+      \resumeItemListStart
+        \resumeItem{Led team of developers/analysts in IAM feature implementation}
+        \resumeItem{Presented project progress at weekly status meetings with client leadership}
+        \resumeItem{Mentored new developers in engineering practices}
+      \resumeItemListEnd
+
+    %---Booz---
+    \resumeSubheading
+      {Booz Allen Hamilton}{Tyson's Corner, VA}
+      {Software Engineering Consultant}{September 2017 - July 2018}
+      \resumeItemListStart
+        \resumeItem{Built RESTful API for search application in Python}
+        \resumeItem{Implemented unsupervised, corpus agnostic named entity recognition algorithm}
+        \resumeItem{Presented prototypes to senior leadership and potential clients}
+      \resumeItemListEnd
+
+    %---WM - Tutor---
+    \resumeSubheading
+    {College of William \& Mary}{Williamsburg, VA}
+    {Tribe Athletics Tutor}{September 2016 - May 2017}
+    \resumeItemListStart
+      \resumeItem{Tutored athletes in intro physics, chemistry, calculus and computer science}
+    \resumeItemListEnd
+
+    %---WM - TA---
+    \resumeSubheading
+    {College of William \& Mary}{Williamsburg, VA}
+    {Chemistry Lab Teaching Assistant}{September 2015 - May 2016}
+    \resumeItemListStart
+      \resumeItem{Led weekly undergraduate lab sessions in General Chemistry I/II}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-------------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Yao, Z., van Velthoven, C.T.J., Kunst, M. et al. A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. Nature 624, 317–332 (2023). \href{https://doi.org/10.1038/s41586-023-06812-z}{https://doi.org/10.1038/s41586-023-06812-z}}
+    \resumeSubItem{Hawrylycz M, Martone ME, Ascoli GA, Bjaalie JG, Dong H-W, Ghosh SS, et al. (2023) A guide to the BRAIN Initiative Cell Census Network data ecosystem. PLoS Biol 21(6): e3002133. https://doi.org/10.1371/journal.pbio.3002133 \href{https://doi.org/10.1371/journal.pbio.3002133}{https://doi.org/10.1371/journal.pbio.3002133}}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://groupbool.xyz}{\textbf{groupbool.xyz}}: Static music discovery and analytics blog. Built with GCP functions that aggregate Spotify data.}
+    \resumeSubItem{\href{https://github.com/pbishwakarma/sentfrag}{\textbf{sentfrag}}: Natural language processing implementation of editing techniques from "The Sense of Structure" by George D. Gopen}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
